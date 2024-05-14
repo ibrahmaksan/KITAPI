@@ -10,7 +10,7 @@ const getMainPage = (req, res) => {
 
 const routeMain = (req, res) => {
     if(req.msg){
-        const username = req.session ? req.session.username : "";
+        const username = req.session ? req.session.username : ""; // pop up gösterimi için bu kısm gerekli 
         const msg = req.msg ? req.msg : "";
         return res.render('index', {username: username, msg :msg}); 
     }
